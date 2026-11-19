@@ -1,0 +1,18 @@
+[Unit]
+Description = AdGuardHome DNS
+After = network-online.target tailscaled.service
+Wants = network-online.target
+
+[Container]
+Image = docker.io/adguard/adguardhome:latest
+ContainerName = adguardhome
+Network = host
+Memory = 200m
+Volume = /data/container/adguardhome/container-data/work:/opt/adguardhome/work # Local
+Volume = /data/container/adguardhome/container-data/conf:/opt/adguardhome/conf # Local
+
+[Service]
+Restart = always
+
+[Install]
+WantedBy = multi-user.target
