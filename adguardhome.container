@@ -6,7 +6,7 @@ Wants = network-online.target
 [Container]
 Image = docker.io/adguard/adguardhome:latest
 ContainerName = adguardhome
-Memory = 200m
+MemoryMax = 200m
 Network = host
 Volume = /data/container/adguardhome/container-data/work:/opt/adguardhome/work
 Volume = /data/container/adguardhome/container-data/conf:/opt/adguardhome/conf
