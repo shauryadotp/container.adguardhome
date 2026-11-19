@@ -6,10 +6,10 @@ Wants = network-online.target
 [Container]
 Image = docker.io/adguard/adguardhome:latest
 ContainerName = adguardhome
-Network = host
 Memory = 200m
-Volume = /data/container/adguardhome/container-data/work:/opt/adguardhome/work # Local
-Volume = /data/container/adguardhome/container-data/conf:/opt/adguardhome/conf # Local
+Network = host
+Volume = /data/container/adguardhome/container-data/work:/opt/adguardhome/work
+Volume = /data/container/adguardhome/container-data/conf:/opt/adguardhome/conf
 
 [Service]
 Restart = always
